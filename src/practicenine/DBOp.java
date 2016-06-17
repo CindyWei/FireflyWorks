@@ -56,7 +56,7 @@ public class DBOp {
 			while (rsq.next()) { 
 
 				
-				css=rsq.getString("CSS");
+				css=rsq.getString("Css");
 
 				}
 				rsq.close();

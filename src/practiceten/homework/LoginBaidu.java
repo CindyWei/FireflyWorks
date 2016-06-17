@@ -4,6 +4,7 @@ package practiceten.homework;
 
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterClass;
 import org.testng.annotations.Test;
 import practicetwo.launch.Browsers;
 import practicetwo.launch.BrowsersType;
@@ -16,7 +17,7 @@ public class LoginBaidu {
 	@BeforeClass
 	public void initalModule(){
 		
-		Browsers.nodeurl = "http://localhost:5555/wd/hub";
+		//Browsers.nodeurl = "http://localhost:5555/wd/hub";
 		Browsers browser = new Browsers(BrowsersType.chrome);
 		
 		driver = browser.driver;		
@@ -32,7 +33,7 @@ public class LoginBaidu {
 		baiduhomepage.login("u1", "p1");
 	}
 	
-	
+	@AfterClass
 	public void release(){
 		driver.quit();
 	}

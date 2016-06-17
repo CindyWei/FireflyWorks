@@ -7,49 +7,49 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import practicefour.ParseProperties;
-import practicefour.Wait;
-import practicejava.CustomException;
+//import practicefour.ParseProperties;
+//import practicefour.Wait;
+//import practicejava.CustomException;
 
 public class Do {
 
 	private WebDriver driver;
-	private Wait waiter;
+	//private Wait waiter;
 	
 	public Do(WebDriver driver){
 		this.driver = driver;	
-		waiter = new Wait(driver);
+	//	waiter = new Wait(driver);
 	}
 	
-	public WebElement what(String locatorname) {
+	public WebElement what(String locator) {
 		WebElement we=null;
 		try{
-			//this.waitForElementPresent(locatorname);
-			we = driver.findElement(By.xpath(locatorname));
+			//this.waitForElementPresent(locator);
+			we = driver.findElement(By.xpath(locator));
 	     }catch(NoSuchElementException e){
 		    System.out.println("-----:(-----");
 	    }
 		return we;
 	}
 	
-	public List<WebElement> whats(String locatorname){
-		return driver.findElements(By.xpath(locatorname));
+	public List<WebElement> whats(String locator){
+		return driver.findElements(By.xpath(locator));
 	}
+//	
+//	public void waitForElementPresent(String locator){
+//		waiter.waitForElementPresent(locator);
+//	}
+//	
+//	public void waitForElementIsEnable(String locator){
+//		waiter.waitForElementIsEnable(locator);
+//	}
 	
-	public void waitForElementPresent(String locatorname){
-		waiter.waitForElementPresent(locatorname);
-	}
 	
-	public void waitForElementIsEnable(String locatorname){
-		waiter.waitForElementIsEnable(locatorname);
-	}
-	
-	
-	public WebElement whatCSS(String locatorname) {
+	public WebElement whatCSS(String locator) {
 		WebElement we=null;
 		try{
-			//this.waitForElementPresent(locatorname);
-			we = driver.findElement(By.cssSelector(locatorname));
+			//this.waitForElementPresent(locator;
+			we = driver.findElement(By.cssSelector(locator));
 	     }catch(NoSuchElementException e){
 		    System.out.println("-----:(-----");
 	    }
@@ -57,8 +57,8 @@ public class Do {
 	}
 	
 	
-	public void waitFor(long timeout){
-		waiter.waitFor(timeout);
-	}
-	
+//	public void waitFor(long timeout){
+//		waiter.waitFor(timeout);
+//	}
+//	
 }

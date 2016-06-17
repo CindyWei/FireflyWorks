@@ -2,7 +2,7 @@ package practiceten.homework;
 
 import org.openqa.selenium.WebDriver;
 
-import practicenine.DBOp;
+//import practicenine.DBOp;
 import practiceseven.libs.Wait;
 
 public class BaiduHomePage extends PageBase{

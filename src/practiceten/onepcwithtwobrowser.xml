@@ -1,7 +1,7 @@
 <suite name="FireflyAutomation" parallel = "tests" thread-count = "2" >
 	<test name="FireflyAutomation1 examples"  preserve-order="true" >
 	   <parameter name="node" value="http://localhost:5555/wd/hub"/>
-	   <parameter name="browser" value="chrome"/>   
+	   <parameter name="browser" value="ie"/>   
 		<classes>
 		    <class name="practiceten.testcases.LoginJD" >
 		        <methods>  
@@ -14,7 +14,7 @@
 	
 	<test name="FireflyAutomation2 examples"  preserve-order="true" >
 	   <parameter name="node" value="http://localhost:6666/wd/hub"/>
-	   <parameter name="browser" value="ff"/>   
+	   <parameter name="browser" value="chrome"/>   
 		<classes>
 		    <class name="practiceten.testcases.LoginJD" >
 		        <methods>  
